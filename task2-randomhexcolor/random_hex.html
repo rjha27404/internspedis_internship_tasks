@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <title>Generating random Hex color</title>
+<head>
+   <div>
+      <h3 id="demo">Click Button to get new random hex color</h3>
+      <button onclick="hex()">Click Me</button>
+      <p id="color"></p>
+   </div>
+   <style>
+      body {
+         height: 100vh;
+         padding: 1rem;
+         display: grid;
+         place-items: center;
+         font-family: verdana;
+      }
+      div {
+         background: white;
+         padding: 1rem 1rem;
+         text-align: center;
+      }
+      p {
+         display: block;
+         padding: 1px;
+         font-size: 20px;
+         font-weight: lighter;
+         font-family: verdana;
+      }
+   </style>
+</head>
+<body>
+   <script>
+      function hex() {
+         let RanHexCol = (Math.random()*16777215).toString(16);
+         document.body.style.backgroundColor = '#' + RanHexCol.slice(0, 6);
+         color.innerHTML = "#" + RanHexCol.slice(0, 6);
+      }
+   </script>
+</body>
+</html>
